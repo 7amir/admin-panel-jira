@@ -1,0 +1,81 @@
+@font-face {
+  font-family: Vazir-medium;
+  src: url("../../public/fonts/vazirmatn-v33.003/fonts/ttf/Vazirmatn-Medium.ttf");
+}
+@font-face {
+  font-family: Vazir-regular;
+  src: url("../../public/fonts/vazirmatn-v33.003/misc/Farsi-Digits/fonts/ttf/Vazirmatn-FD-Regular.ttf");
+}
+@font-face {
+  font-family: Vazir-light;
+  src: url("../../public/fonts/vazirmatn-v33.003/fonts/ttf/Vazirmatn-Light.ttf");
+}
+
+body {
+  font-family: Vazir-regular;
+  background: #fafafa;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: #344563;
+}
+
+* {
+  // color: #344563;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+.v-container {
+  max-width: 98%;
+}
+
+.v-btn {
+  letter-spacing: 0 !important;
+  box-shadow:  none;
+  
+  &:hover {
+    box-shadow: none !important;
+  }
+}
+
+.v-btn--size-default {
+  height: 32px !important;
+}
+
+.header-list {
+  .menu {
+    height: 25px;
+  }
+  
+  .v-list {
+    .v-list-item {
+      display: inline-block;
+      padding: 0;
+      
+      a {
+        border-radius: 3px;
+        margin: 0 4px;
+        padding: 6px 12px 6px 5px;
+        transition: all 0.2s ease-in-out;
+        color: #344563;
+        
+        &:hover {
+          background: rgba(222, 235, 255, 0.9);
+          color: #0052CC;
+
+          i {
+            color: #0052CC;
+          }
+        }
+      }
+    }
+  }
+
+  .v-list-item--density-default.v-list-item--one-line {
+    min-height: 0;
+  }
+}
