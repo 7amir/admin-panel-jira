@@ -18,19 +18,25 @@ body {
   margin: 0;
   padding: 0;
   color: #344563;
+  // overflow-y: auto;
 }
 
-* {
-  // color: #344563;
-}
+
 
 a {
   text-decoration: none;
   display: block;
 }
 
+.v-breadcrumbs-item--link:hover {
+  text-decoration: none;
+  color: #4e6ea1;
+}
+
 .v-container {
-  max-width: 98%;
+  max-width: 99%;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 .v-btn {
@@ -40,10 +46,18 @@ a {
   &:hover {
     box-shadow: none !important;
   }
+
+  &:focus {
+    box-shadow: none !important;
+  }
 }
 
 .v-btn--size-default {
   height: 32px !important;
+}
+
+.v-list-item__spacer {
+  width: 10px !important;
 }
 
 .header-list {
@@ -77,5 +91,95 @@ a {
 
   .v-list-item--density-default.v-list-item--one-line {
     min-height: 0;
+  }
+}
+
+.header-icons {
+  .v-btn {
+    padding: 0;
+    min-width: 32px;
+    border-radius: 50px;
+    font-size: 16px;
+    margin: 0 3px;
+
+    &:hover {
+      background: rgba(222, 235, 255, 0.9);
+      color: #0052CC;
+    }
+  }
+}
+
+// جستجو
+.search-box {
+  .v-card {
+    height: 34px;
+    box-shadow: none;
+    border: 2px solid #DFE1E6;
+
+    .v-field__field {
+      height: 31px;
+    }
+    
+    .v-text-field .v-field--single-line input {
+      min-height: 0px;
+      height: 32px;
+      font-size: 14px;
+      padding-right: 7px;
+    }
+
+    .v-field {
+      display: flex;
+      flex-direction: row-reverse !important;
+
+      label {
+        font-size: 14px;
+        font-family: Vazir-regular;
+        color: #344563;
+        margin-right: 6px;
+      }
+
+      i {
+        font-size: 21px;
+        color: #344563;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.v-navigation-drawer {
+  top: 56px !important;
+  width: 240px !important;
+
+  .v-list-item--density-default.v-list-item--one-line {
+    min-height: 38px;
+    color: #172B4d;
+    font-size: 14px;
+    font-family: Vazir-medium;
+    
+    
+    i {
+      font-size: 21px;
+    }
+  }
+
+  .v-list-item--nav .v-list-item-title {
+    font-family: Vazir-regular;
+    color: #344563;
+    font-size: 12.5px;
+  }
+}
+
+.project-title {
+  padding: 0.5rem 16rem 0 0;
+
+  .v-breadcrumbs--density-default {
+    padding-right: 0;
+    padding-bottom: 0;
+
+    .v-breadcrumbs-item {
+      padding: 0;
+    }
+
   }
 }
