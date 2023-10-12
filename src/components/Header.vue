@@ -103,21 +103,7 @@ header {
   // box-shadow: 0px 2px 10px -7px #6a6a6a;
   // overflow-y: hidden;
 
-  .admin-icon {
-    background: #0052CC;
-    width: 29px;
-    height: 29px;
-    border-radius: 50px;
-    color: #fff;
-    position: relative;
-  
-    span {
-      position: absolute;
-      top: 7px;
-      left: 7px;
-      font-size: 11px;
-    }
-  }
+
 
   &::after {
     height: var(--ds-space-050, 4px);

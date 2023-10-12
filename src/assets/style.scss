@@ -18,10 +18,8 @@ body {
   margin: 0;
   padding: 0;
   color: #344563;
-  // overflow-y: auto;
+  // overflow: hidden;
 }
-
-
 
 a {
   text-decoration: none;
@@ -34,7 +32,7 @@ a {
 }
 
 .v-container {
-  max-width: 99%;
+  max-width: 98%;
   padding-top: 11px;
   padding-bottom: 11px;
 }
@@ -85,12 +83,32 @@ a {
             color: #0052CC;
           }
         }
+
+        &:focus {
+          color: #0052CC;
+        }
       }
     }
   }
 
   .v-list-item--density-default.v-list-item--one-line {
     min-height: 0;
+  }
+}
+
+.admin-icon {
+  background: #0052CC;
+  width: 29px;
+  height: 29px;
+  border-radius: 50px;
+  color: #fff;
+  position: relative;
+
+  span {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    font-size: 11px;
   }
 }
 
@@ -104,6 +122,11 @@ a {
 
     &:hover {
       background: rgba(222, 235, 255, 0.9);
+      color: #0052CC;
+    }
+
+    &:focus {
+      background: rgb(226 238 255 / 90%);
       color: #0052CC;
     }
   }
@@ -147,6 +170,10 @@ a {
   }
 }
 
+.search-body .v-card .v-field {
+  background: #FAFBFC;
+}
+
 .v-navigation-drawer {
   top: 56px !important;
   width: 240px !important;
@@ -171,7 +198,7 @@ a {
 }
 
 .project-title {
-  padding: 0.5rem 16rem 0 0;
+  padding: 0.5rem 16rem 0 1rem;
 
   .v-breadcrumbs--density-default {
     padding-right: 0;
@@ -180,6 +207,9 @@ a {
     .v-breadcrumbs-item {
       padding: 0;
     }
+  }
 
+  h6 {
+    font-size: 20px ;
   }
 }
