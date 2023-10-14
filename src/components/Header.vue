@@ -8,7 +8,7 @@ export default {
   <header>
     <v-container>
       <v-row>
-        <v-col class="header-list d-flex align-center pr-0" cols="8">
+        <v-col cols="8" class="header-list d-flex align-center pr-0">
           <div class="menu ml-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
               <path fill="currentColor"

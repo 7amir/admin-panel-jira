@@ -1,14 +1,16 @@
 @font-face {
   font-family: Vazir-medium;
-  src: url("../../public/fonts/vazirmatn-v33.003/fonts/ttf/Vazirmatn-Medium.ttf");
+  src: url("../../fonts/vazirmatn-v33.003/fonts/ttf/Vazirmatn-Medium.ttf");
 }
+
 @font-face {
   font-family: Vazir-regular;
-  src: url("../../public/fonts/vazirmatn-v33.003/misc/Farsi-Digits/fonts/ttf/Vazirmatn-FD-Regular.ttf");
+  src: url("../../fonts/vazirmatn-v33.003/misc/Farsi-Digits/fonts/ttf/Vazirmatn-FD-Regular.ttf");
 }
+
 @font-face {
   font-family: Vazir-light;
-  src: url("../../public/fonts/vazirmatn-v33.003/fonts/ttf/Vazirmatn-Light.ttf");
+  src: url("../../fonts/vazirmatn-v33.003/fonts/ttf/Vazirmatn-Light.ttf");
 }
 
 body {
@@ -39,8 +41,8 @@ a {
 
 .v-btn {
   letter-spacing: 0 !important;
-  box-shadow:  none;
-  
+  box-shadow: none;
+
   &:hover {
     box-shadow: none !important;
   }
@@ -48,6 +50,10 @@ a {
   &:focus {
     box-shadow: none !important;
   }
+}
+
+.shadow {
+  box-shadow: 5px 5px 10px -9px #2b2b2bb5 !important;
 }
 
 .v-btn--size-default {
@@ -62,19 +68,19 @@ a {
   .menu {
     height: 25px;
   }
-  
+
   .v-list {
     .v-list-item {
       display: inline-block;
       padding: 0;
-      
+
       a {
         border-radius: 3px;
         margin: 0 4px;
         padding: 6px 12px 6px 5px;
         transition: all 0.2s ease-in-out;
         color: #344563;
-        
+
         &:hover {
           background: rgba(222, 235, 255, 0.9);
           color: #0052CC;
@@ -142,7 +148,7 @@ a {
     .v-field__field {
       height: 31px;
     }
-    
+
     .v-text-field .v-field--single-line input {
       min-height: 0px;
       height: 32px;
@@ -183,8 +189,8 @@ a {
     color: #172B4d;
     font-size: 14px;
     font-family: Vazir-medium;
-    
-    
+
+
     i {
       font-size: 21px;
     }
@@ -210,6 +216,24 @@ a {
   }
 
   h6 {
-    font-size: 20px ;
+    font-size: 20px;
   }
 }
+
+.list-todo-box {
+  width: 150px;
+
+  .v-list-item {
+    min-height: 39px;
+    padding-right: 10px !important;
+
+    .v-list-item-title {
+      font-size: 12.5px;
+    }
+
+    i {
+      font-size: 19px;
+    }
+  }
+}
+
