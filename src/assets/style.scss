@@ -109,6 +109,7 @@ a {
   border-radius: 50px;
   color: #fff;
   position: relative;
+  cursor: pointer;
 
   span {
     position: absolute;
@@ -116,6 +117,59 @@ a {
     left: 7px;
     font-size: 11px;
   }
+}
+
+.list-account {
+  min-width: 240px;
+  font-size: 12.5px;
+  color: #344563;
+
+  .v-list-item {
+    padding: 0 16px;
+    min-height: 42px;
+
+    .v-list-item-title {
+      font-family: Vazir-medium;
+      font-size: 12.5px;
+    }
+
+  }
+}
+
+.list-cog {
+  min-width: 400px;
+  color: #344563;
+
+  .item-title {
+    padding: 0;
+    font-size: 12.5px;
+    font-family: Vazir-medium;
+    min-height: 35px;
+    color: #9d9faf;
+    margin-bottom: -10px;
+    // color: #5E6C84;
+  }
+
+  .v-list-item {
+    min-height: 42px;
+
+    i {
+      background: #0b1932;
+      color: #fff;
+      width: 28px;
+      height: 28px;
+      border-radius: 5px;
+      font-size: 17px;
+    }
+  }
+
+  .v-list-item-title {
+    font-size: 12.5px;
+  }
+}
+
+.v-layout {
+  flex: 0;
 }
 
 .header-icons {
@@ -174,6 +228,17 @@ a {
       }
     }
   }
+
+  .search-responsive {
+    border-radius: 50px;
+    color: #7b8699;
+    margin-left: -8px;
+    display: none;
+
+    i {
+      font-size: 19px;
+    }
+  }
 }
 
 .search-body .v-card .v-field {
@@ -204,7 +269,7 @@ a {
 }
 
 .project-title {
-  padding: 0.5rem 16rem 0 1rem;
+  padding: 4rem 16rem 0 1rem;
 
   .v-breadcrumbs--density-default {
     padding-right: 0;
@@ -237,3 +302,15 @@ a {
   }
 }
 
+
+
+// ریسپانسیو
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 959px) {
+  .search-responsive {
+    display: flex !important;
+  }
+}
