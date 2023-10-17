@@ -26,6 +26,7 @@ body {
 a {
   text-decoration: none;
   display: block;
+  color: #344563;
 }
 
 .v-breadcrumbs-item--link:hover {
@@ -145,9 +146,8 @@ a {
     font-size: 12.5px;
     font-family: Vazir-medium;
     min-height: 35px;
-    color: #9d9faf;
+    color: #9d9faf !important;
     margin-bottom: -10px;
-    // color: #5E6C84;
   }
 
   .v-list-item {
@@ -189,6 +189,71 @@ a {
       background: rgb(226 238 255 / 90%);
       color: #0052CC;
     }
+  }
+}
+.help-box-navigation {
+  .v-navigation-drawer {
+    width: 330px !important;
+  }
+
+  .v-locale--is-ltr {
+    direction: rtl !important;
+  }
+
+  .v-navigation-drawer__content {
+    direction: rtl !important;
+  }
+}
+.navigation-help {
+  direction: rtl !important;
+  width: 400px !important;
+}
+
+.notification-box {
+  
+  .v-list-item-title {
+    font-size: 12.5px !important;
+    font-family: Vazir-medium;
+    color: #344563;
+  }
+  .v-list-item-subtitle {
+    color: #344563;
+    font-size: 12.5px;
+  }
+}
+
+.list__filter {
+  .v-list-item__content {
+    display: flex;
+    color: #344563;
+
+    .v-list-item-title {
+      font-size: 12.5px !important;
+
+    }
+
+    i {
+      font-size: 19px;
+    }
+  }
+}
+
+.item-share {
+  font-size: 12.5px !important; 
+  color: #344563;
+
+  .v-list-item__content{
+    display: flex;
+  }
+
+  .v-list-item-title {
+    font-size: 12.5px !important; 
+
+  }
+
+  .share-description {
+    display: inline-block;
+    padding: 13px 16px 8px;
   }
 }
 

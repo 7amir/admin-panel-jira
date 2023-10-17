@@ -25,6 +25,11 @@ export default {
         { title: 'کپی کردن لینک', icon: 'mdi-link-variant' },
         { title: 'حذف', icon: 'mdi-delete-empty-outline' },
       ],
+      upload: [
+        { title: 'OneDrive برای کسب و کار', icon: 'mdi-microsoft-onedrive' },
+        { title: 'sharePoint', icon: 'mdi-microsoft-sharepoint' },
+        { title: 'تنطیمات فایل‌ها', icon: 'mdi-folder-cog-outline' },
+      ],
       tab: null,
     }
   },
@@ -61,15 +66,52 @@ export default {
 
       <v-col lg="6" md="6" sm="12" align="left">
         <div class="icon-action">
-          <v-btn>
-            <v-icon class="ml-1">mdi-share-variant-outline</v-icon>
-            اشتراک گذاری
-          </v-btn>
+          <v-menu>
+          <template v-slot:activator="{ props }">
+            <v-btn v-bind="props">
+              <v-icon class="ml-1">mdi-share-variant-outline</v-icon>
+              اشتراک گذاری
+            </v-btn>
+          </template>
+          <v-list class="item-share shadow">
+            <v-list-item v-for="(item, index) in upload" :key="index" :value="index">
+              <v-icon class="ml-2">{{ item.icon }}</v-icon>
+              <v-list-item-title class="title-new-btn">{{ item.title }}</v-list-item-title>
+            </v-list-item>
 
-          <v-btn>
-            <v-icon class="ml-1">mdi-filter-variant</v-icon>
-            فیلتر
-          </v-btn>
+            <v-divider class="mt-2"></v-divider>
+
+            <span class="share-description">یک فایل pbix.، rdl. یا xlsx. را در فضای کاری خود آپلود کنید
+            </span>
+          </v-list>
+        </v-menu> 
+
+          <!-- فیلتر -->
+          <v-menu>
+            <template v-slot:activator="{ props }">
+              <v-btn v-bind="props">
+                <v-icon class="ml-1">mdi-filter-variant</v-icon>
+                فیلتر
+              </v-btn>
+            </template>
+            <v-list class="list__filter shadow">
+              <v-list-item>
+                <v-icon class="ml-2"> mdi-calendar-range </v-icon>
+                <v-list-item-title>کارت ها را سفارشی کنید</v-list-item-title>
+              </v-list-item>
+
+              <v-list-item>
+                <v-icon class="ml-2"> mdi-calendar-range </v-icon>
+                <v-list-item-title>همه ستون ها را گسترش دهید</v-list-item-title>
+              </v-list-item>
+
+              <v-list-item>
+                <v-icon class="ml-2"> mdi-calendar-range </v-icon>
+                <v-list-item-title>همه ستون ها را جمع کنید</v-list-item-title>
+              </v-list-item>
+
+            </v-list>
+          </v-menu>
 
           <v-btn>
             <v-icon class="ml-1">mdi-dots-horizontal</v-icon>
