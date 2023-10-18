@@ -65,9 +65,19 @@ a {
   width: 10px !important;
 }
 
+.v-navigation-drawer .v-list {
+  overflow-y: auto;
+}
+
+.slide-bar {
+  position: static !important;
+  // margin-top: 58px;
+}
+
 .header-list {
   .menu {
     height: 25px;
+    margin-right: -10px;
   }
 
   .v-list {
@@ -191,6 +201,7 @@ a {
     }
   }
 }
+
 .help-box-navigation {
   .v-navigation-drawer {
     width: 330px !important;
@@ -204,18 +215,20 @@ a {
     direction: rtl !important;
   }
 }
+
 .navigation-help {
   direction: rtl !important;
   width: 400px !important;
 }
 
 .notification-box {
-  
+
   .v-list-item-title {
     font-size: 12.5px !important;
     font-family: Vazir-medium;
     color: #344563;
   }
+
   .v-list-item-subtitle {
     color: #344563;
     font-size: 12.5px;
@@ -223,13 +236,14 @@ a {
 }
 
 .list__filter {
+  width: 250px;
+
   .v-list-item__content {
     display: flex;
     color: #344563;
 
     .v-list-item-title {
       font-size: 12.5px !important;
-
     }
 
     i {
@@ -239,21 +253,20 @@ a {
 }
 
 .item-share {
-  font-size: 12.5px !important; 
+  font-size: 12.5px !important;
   color: #344563;
 
-  .v-list-item__content{
+  .v-list-item__content {
     display: flex;
   }
 
   .v-list-item-title {
-    font-size: 12.5px !important; 
-
+    font-size: 12.5px !important;
   }
 
   .share-description {
     display: inline-block;
-    padding: 13px 16px 8px;
+    padding: 13px 17px 8px;
   }
 }
 
@@ -334,7 +347,7 @@ a {
 }
 
 .project-title {
-  padding: 4rem 16rem 0 1rem;
+  padding: 0 1rem 0 1rem;
 
   .v-breadcrumbs--density-default {
     padding-right: 0;
@@ -367,6 +380,59 @@ a {
   }
 }
 
+.dialog-create {
+  .v-card {
+    color: #344563;
+
+    .v-card-title {
+      border-bottom: 1px solid #e8e8e8;
+      font-size: 20px;
+      padding-right: 26.5px;
+    }
+
+    .v-field {
+      box-shadow: none;
+      background: #eeeeee;
+      font-size: 14px;
+    }
+
+    .v-text-field .v-field--no-label input {
+      padding: 0 16px;
+    }
+
+    .v-field__input {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .v-input--density-default .v-field--no-label {
+      --v-field-padding-bottom: 0px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .v-input--density-default .v-field--variant-solo {
+      --v-input-control-height: 40px !important;
+    }
+
+    .v-card-actions {
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .v-textarea {
+      .v-field__input {
+        padding-top: 13px;
+      }
+    }
+
+    i {
+      color: #344563;
+    }
+  }
+}
 
 
 // ریسپانسیو

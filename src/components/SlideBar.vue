@@ -7,7 +7,7 @@
 <template>
   <div>
     <v-layout>
-      <v-navigation-drawer permanent>
+      <v-navigation-drawer permanent class="slide-bar">
         <div class="navigation d-flex ">
           <v-list nav>
             <v-list-item>اصلی</v-list-item>
@@ -78,11 +78,12 @@
 
 <style lang="scss" scoped>
 .navigation {
-  height: 91vh;
+  height: 93vh;
   flex-direction: column;
   justify-content: space-between;
 
   .feedbacks {
+    margin-bottom: 15px;
     text-align: center;
     font-size: 12px;
     font-family: Vazir-light;  

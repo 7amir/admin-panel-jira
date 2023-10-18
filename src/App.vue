@@ -11,8 +11,10 @@ export default {
 <template>
   <v-locale-provider rtl>
     <Header />
-    <SlideBar />
-    <ProjectList />
+    <div class="container d-flex">
+      <SlideBar />
+      <ProjectList />
+    </div>
 
   </v-locale-provider>
 </template>

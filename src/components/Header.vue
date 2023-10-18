@@ -33,6 +33,7 @@ export default {
       ],
       drawer: null,
       drawerNotification: null,
+      dialog: false,
     }
   }
 }
@@ -104,11 +105,66 @@ export default {
                 </a>
               </v-list-item>
 
-              <v-btn color="#0052CC" class="mr-2 hidden-lg-and-down d-lg-block">ایجاد</v-btn>
 
-              <v-btn color="#0052CC" class="mr-2 pr-0 pl-0 hidden-lg" min-width="32">
-                <v-icon>mdi-plus</v-icon>
-              </v-btn>
+              <v-dialog v-model="dialog" persistent width="1020" class="dialog-create">
+                <template v-slot:activator="{ props }">
+                  <v-btn color="#0052CC" v-bind="props" class="mr-2 hidden-lg-and-down d-lg-block">ایجاد</v-btn>
+                  <v-btn color="#0052CC" v-bind="props" class="mr-2 pr-0 pl-0 hidden-lg" min-width="32">
+                    <v-icon>mdi-plus</v-icon>
+                  </v-btn>
+                </template>
+                <v-card>
+                  <v-card-title>
+                    <span >ایجاد پروژه</span>
+                  </v-card-title>
+                  <v-container class="mt-2 mb-4">
+                    <v-row>
+                      <v-col cols="12" sm="6">
+                        <label>نام</label>
+                        <v-text-field variant="solo" hide-details="auto"></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6">
+                        <label>پروژه</label>
+                        <v-text-field variant="solo" hide-details="auto"></v-text-field>
+                      </v-col>
+
+                      <v-col cols="12" sm="6">
+                        <label>سن</label>
+                        <v-select
+                          :items="['0-17', '18-29', '30-54', '54+']"
+                          variant="solo"
+                          hide-details="auto"
+                        ></v-select>
+                      </v-col>
+                      <v-col cols="12" sm="6">
+                        <label>نقش</label>
+                        <v-select
+                          :items="['مدیر', 'نویسنده', 'مشترک', 'مشارکت کننده']"
+                          variant="solo"
+                          hide-details="auto"
+                        ></v-select>
+                      </v-col>
+
+                      <v-col cols="12">
+                        <label>توضیح</label>
+                        <v-textarea 
+                          variant="solo"
+                          hide-details="auto">
+                        </v-textarea>
+                      </v-col>
+                    </v-row>
+                  </v-container>
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
+                      انصراف
+                    </v-btn>
+                    <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
+                      ذخیره
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-dialog>
             </v-list>
           </div>
         </v-col>
@@ -140,7 +196,6 @@ export default {
               <v-icon>mdi-magnify</v-icon>
             </v-card>
           </div>
-
 
           <!-- اعلان‌ها -->
           <v-locale-provider ltr>
@@ -359,9 +414,7 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  position: fixed;
-  width: 100%;
-  z-index: 1;
+  position: relative;
   background: #fff;
 
   &::after {

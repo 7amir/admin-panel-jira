@@ -25,16 +25,27 @@ export default {
         { title: 'کپی کردن لینک', icon: 'mdi-link-variant' },
         { title: 'حذف', icon: 'mdi-delete-empty-outline' },
       ],
-      upload: [
+      share: [
         { title: 'OneDrive برای کسب و کار', icon: 'mdi-microsoft-onedrive' },
         { title: 'sharePoint', icon: 'mdi-microsoft-sharepoint' },
         { title: 'تنطیمات فایل‌ها', icon: 'mdi-folder-cog-outline' },
+      ],
+      more: [
+        { title: 'کارت ها را سفارشی کنید', icon: 'mdi-text-box-outline' },
+        { title: 'همه ستون ها را گسترش دهید', icon: 'mdi-perspective-more' },
+        { title: 'همه ستون ها را جمع کنید', icon: 'mdi-perspective-more' },
+      ],
+      filter: [
+        { title: 'پروژه‌های من', icon: 'mdi-account-circle-outline' },
+        { title: 'سر رسید این هفته', icon: 'mdi-calendar-range' },
       ],
       tab: null,
     }
   },
   methods: {
-
+    logA() {
+      console.log('d');
+    }
   }
 
 }
@@ -66,6 +77,7 @@ export default {
 
       <v-col lg="6" md="6" sm="12" align="left">
         <div class="icon-action">
+          <!-- اشتراک گذاری -->
           <v-menu>
           <template v-slot:activator="{ props }">
             <v-btn v-bind="props">
@@ -74,14 +86,21 @@ export default {
             </v-btn>
           </template>
           <v-list class="item-share shadow">
-            <v-list-item v-for="(item, index) in upload" :key="index" :value="index">
+            <v-list-item 
+              v-for="(item, index) in share" 
+              :key="index" 
+              :value="index">
               <v-icon class="ml-2">{{ item.icon }}</v-icon>
-              <v-list-item-title class="title-new-btn">{{ item.title }}</v-list-item-title>
+              <v-list-item-title 
+                class="title-new-btn">
+                {{ item.title }}
+              </v-list-item-title>
             </v-list-item>
 
             <v-divider class="mt-2"></v-divider>
 
-            <span class="share-description">یک فایل pbix.، rdl. یا xlsx. را در فضای کاری خود آپلود کنید
+            <span class="share-description">
+              یک فایل pbix.، rdl. یا xlsx. را در فضای کاری خود آپلود کنید
             </span>
           </v-list>
         </v-menu> 
@@ -95,32 +114,42 @@ export default {
               </v-btn>
             </template>
             <v-list class="list__filter shadow">
-              <v-list-item>
-                <v-icon class="ml-2"> mdi-calendar-range </v-icon>
-                <v-list-item-title>کارت ها را سفارشی کنید</v-list-item-title>
-              </v-list-item>
-
-              <v-list-item>
-                <v-icon class="ml-2"> mdi-calendar-range </v-icon>
-                <v-list-item-title>همه ستون ها را گسترش دهید</v-list-item-title>
-              </v-list-item>
-
-              <v-list-item>
-                <v-icon class="ml-2"> mdi-calendar-range </v-icon>
-                <v-list-item-title>همه ستون ها را جمع کنید</v-list-item-title>
-              </v-list-item>
-
+              <v-list-item 
+                v-for="(item, index) in filter" 
+                :key="index" 
+                :value="index">
+              <v-icon class="ml-2">{{ item.icon }}</v-icon>
+              <v-list-item-title 
+                class="title-new-btn">
+                {{ item.title }}
+              </v-list-item-title>
+            </v-list-item>
             </v-list>
           </v-menu>
 
-          <v-btn>
-            <v-icon class="ml-1">mdi-dots-horizontal</v-icon>
-            بیشتر
-          </v-btn>
+          <v-menu>
+            <template v-slot:activator="{ props }">
+              <v-btn v-bind="props">
+                <v-icon class="ml-1">mdi-dots-horizontal</v-icon>
+                بیشتر
+              </v-btn>
+            </template>
+            <v-list class="list__filter shadow">
+              <v-list-item 
+                v-for="(item, index) in more" 
+                :key="index" 
+                :value="index">
+              <v-icon class="ml-2">{{ item.icon }}</v-icon>
+              <v-list-item-title 
+                class="title-new-btn">
+                {{ item.title }}
+              </v-list-item-title>
+            </v-list-item>
+            </v-list>
+          </v-menu>
         </div>
       </v-col>
     </v-row>
-
 
     <v-row>
       <v-col lg="3" md="6" sm="12">
@@ -176,7 +205,7 @@ export default {
               </div>
 
               <div class="icons">
-                <v-btn min-width="5" max-height="18" class="pr-0 pl-0">
+                <v-btn min-width="5" max-height="18" class="pr-0 pl-0" @click="logA()">
                   <v-icon color="green">mdi-check</v-icon>
                   <v-tooltip location="bottom" activator="parent">انجام شده</v-tooltip>
                 </v-btn>
